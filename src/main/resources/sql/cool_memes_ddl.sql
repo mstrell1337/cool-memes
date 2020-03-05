@@ -1,6 +1,5 @@
 -- DDL
 
-
 CREATE DATABASE memes;
 USE memes;
 
@@ -34,7 +33,7 @@ CREATE TABLE snapshots (
 	snapshot_dislikes_count INTEGER,
 	snapshot_reposts_count INTEGER,
 	snapshot_comments_count INTEGER,
-	snapshot_link TEXT,
+	snapshot_link TEXT
 );
 
 CREATE TABLE memes (
