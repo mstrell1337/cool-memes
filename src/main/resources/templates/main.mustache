@@ -7,18 +7,16 @@
 <body>
     <div>
         <form method="post">
-            <input type="number" name="snapshot_timestamp" placeholder="snapshot_timestamp">
-            <input type="number" name="snapshot_platform_id" placeholder="snapshot_platform_id">
-            <input type="number" name="snapshot_post_id" placeholder="snapshot_post_id">
-            <input type="number" name="snapshot_type_id" placeholder="snapshot_type_id">
             <input type="number" name="snapshot_views_count" placeholder="snapshot_views_count">
             <input type="number" name="snapshot_likes_count" placeholder="snapshot_likes_count">
             <input type="number" name="snapshot_dislikes_count" placeholder="snapshot_dislikes_count">
-            <input type="number" name="snapshot_re_count" placeholder="snapshot_re_count">
             <input type="number" name="snapshot_comments_count" placeholder="snapshot_comments_count">
-            <input type="text" name="snapshot_name" placeholder="snapshot_name">
-            <input type="text" name="snapshot_desc" placeholder="snapshot_desc">
-            <input type="text" name="snapshot_link" placeholder="snapshot_link">
+            <input type="number" name="snapshot_timestamp" placeholder="snapshot_timestamp">
+            <input type="text" name="snapshot_title" placeholder="snapshot_title">
+            <input type="text" name="snapshot_id" placeholder="snapshot_id">
+            <input type="text" name="snapshot_author_id" placeholder="snapshot_author_id">
+            <input type="text" name="snapshot_tags" placeholder="snapshot_tags">
+            <input type="text" name="snapshot_description" placeholder="snapshot_description">
             <button type="submit">Add</button>
         </form>
     </div>
@@ -26,7 +24,7 @@
         {{#snapshots}}
             <div>
                 <b>{{id}}</b>
-                <span>{{snapshot_name}}</span>
+                <span>{{snapshot_title}}</span>
                 <i>{{snapshot_views_count}}</i>
             </div>
     {{/snapshots}}
