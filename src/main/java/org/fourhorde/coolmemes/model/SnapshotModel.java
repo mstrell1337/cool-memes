@@ -2,10 +2,7 @@ package org.fourhorde.coolmemes.model;
 
 import com.opencsv.bean.CsvBindByName;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
@@ -15,7 +12,7 @@ public class SnapshotModel {
     private Integer id;
 
     @CsvBindByName
-    private Integer snapshot_timestamp;
+    private String snapshot_timestamp;
     @CsvBindByName
     private Integer snapshot_views_count;
     @CsvBindByName
@@ -39,12 +36,12 @@ public class SnapshotModel {
     public SnapshotModel() {}
 
     public SnapshotModel(
-//                         int snapshot_platform_id, int snapshot_post_id,
-//                         int snapshot_type_id, int snapshot_re_count, String snapshot_link,
-                         int snapshot_views_count, int snapshot_likes_count,
-                         int snapshot_dislikes_count, int snapshot_comments_count,
-                         String snapshot_title, int snapshot_timestamp,
-                         String snapshot_id, String snapshot_author_id, String snapshot_tags, String snapshot_description) {
+//            int snapshot_platform_id, int snapshot_post_id, int snapshot_type_id, int snapshot_re_count, String snapshot_link,
+            int snapshot_views_count, int snapshot_likes_count,
+            int snapshot_dislikes_count, int snapshot_comments_count,
+            String snapshot_timestamp, String snapshot_title,
+            String snapshot_id, String snapshot_author_id,
+            String snapshot_tags, String snapshot_description) {
 //        this.snapshot_platform_id = snapshot_platform_id;
 //        this.snapshot_post_id = snapshot_post_id;
 //        this.snapshot_type_id = snapshot_type_id;
@@ -65,9 +62,6 @@ public class SnapshotModel {
     public Integer getId() {
         return id;
     }
-    public Integer getSnapshot_timestamp(){
-        return snapshot_timestamp;
-    }
     public Integer getSnapshot_views_count(){ return snapshot_views_count; }
     public Integer getSnapshot_likes_count(){
         return snapshot_likes_count;
@@ -79,6 +73,9 @@ public class SnapshotModel {
         return snapshot_comments_count;
     }
 
+    public String getSnapshot_timestamp(){
+        return snapshot_timestamp;
+    }
     public String getSnapshot_title(){
         return snapshot_title;
     }
@@ -98,9 +95,6 @@ public class SnapshotModel {
     public void setId(Integer id) {
         this.id = id;
     }
-    public void setSnapshot_timestamp(Integer snapshot_timestamp){
-        this.snapshot_timestamp = snapshot_timestamp;
-    }
     public void setSnapshot_views_count(Integer snapshot_views_count){
         this.snapshot_views_count = snapshot_views_count;
     }
@@ -114,6 +108,9 @@ public class SnapshotModel {
         this.snapshot_comments_count = snapshot_comments_count;
     }
 
+    public void setSnapshot_timestamp(String snapshot_timestamp){
+        this.snapshot_timestamp = snapshot_timestamp;
+    }
     public void setSnapshot_title(String snapshot_name){
         this.snapshot_title = snapshot_name;
     }
