@@ -39,35 +39,4 @@ public class MainController {
         return "main";
     }
 
-    @PostMapping
-    public String add(
-            Map<String, Object> model,
-            @RequestParam String snapshot_views_count,
-            @RequestParam String snapshot_likes_count,
-            @RequestParam String snapshot_dislikes_count,
-            @RequestParam String snapshot_comments_count,
-            @RequestParam String snapshot_timestamp,
-            @RequestParam String snapshot_title,
-            @RequestParam String snapshot_id,
-            @RequestParam String snapshot_author_id,
-            @RequestParam String snapshot_tags,
-            @RequestParam String snapshot_description
-            ) {
-        SnapshotModel snapshotModel = new SnapshotModel(
-                Integer.parseInt(snapshot_views_count),
-                Integer.parseInt(snapshot_likes_count),
-                Integer.parseInt(snapshot_dislikes_count),
-                Integer.parseInt(snapshot_comments_count),
-                snapshot_timestamp,
-                snapshot_title,
-                snapshot_id,
-                snapshot_author_id,
-                snapshot_tags,
-                snapshot_description);
-        snapshotRepository.save(snapshotModel);
-        Iterable<SnapshotModel> snapshots = snapshotRepository.findAll();
-        model.put("snapshots", snapshots);
-        return "main";
-    }
-
 }
