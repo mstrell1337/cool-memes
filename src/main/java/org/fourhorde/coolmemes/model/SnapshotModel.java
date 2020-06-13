@@ -8,29 +8,40 @@ import java.util.Objects;
 @Entity
 public class SnapshotModel {
     @Id
-    @GeneratedValue(strategy=GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(columnDefinition = "BIGINT")
     private Integer id;
 
     @CsvBindByName
+    @Column(columnDefinition = "TEXT")
     private String snapshot_timestamp;
     @CsvBindByName
+    @Column(columnDefinition = "BIGINT")
     private Integer snapshot_views_count;
     @CsvBindByName
+    @Column(columnDefinition = "BIGINT")
     private Integer snapshot_likes_count;
     @CsvBindByName
+    @Column(columnDefinition = "BIGINT")
     private Integer snapshot_dislikes_count;
     @CsvBindByName
+    @Column(columnDefinition = "BIGINT")
     private Integer snapshot_comments_count;
 
     @CsvBindByName
+    @Column(columnDefinition = "TEXT")
     private String snapshot_id;
     @CsvBindByName
+    @Column(columnDefinition = "TEXT")
     private String snapshot_author_id;
     @CsvBindByName
+    @Column(columnDefinition = "TEXT")
     private String snapshot_tags;
     @CsvBindByName
+    @Column(columnDefinition = "TEXT")
     private String snapshot_title;
     @CsvBindByName
+    @Column(columnDefinition = "TEXT")
     private String snapshot_description;
 
     public SnapshotModel() {}

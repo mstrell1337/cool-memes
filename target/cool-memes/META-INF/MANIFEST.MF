@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Created-By: IntelliJ IDEA
+Built-By: BigBoss
+Build-Jdk: 14.0.1
+Implementation-Title: cool-memes
+Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Vendor-Id: org.fourhorde
+Main-Class: ${start-class}
+
