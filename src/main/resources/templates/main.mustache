@@ -1,0 +1,17 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>CoolMemes</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+    <div>Snapshots List</div>
+        {{#snapshots}}
+            <div>
+                <b>{{id}}</b>
+                <span>{{snapshot_title}}</span>
+                <i>{{snapshot_views_count}}</i>
+            </div>
+    {{/snapshots}}
+</body>
+</html>
